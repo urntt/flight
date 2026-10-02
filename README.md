@@ -52,7 +52,7 @@ While the mod is enabled, double-tap jump to take off in any game mode. Game mod
 
 The mod adds two key bindings in **Options → Controls → Key Binds**, both unbound by default:
 
-- **Toggle Flight** turns the mod on or off and shows the new state on the action bar. On a server that the multiplayer settings rule out, it only shows that the mod is disabled there.
+- **Toggle Flight Ability** turns the mod on or off, that is, whether double-tapping jump can take off, and shows the new state on the action bar. It does not start a flight by itself; turning it off mid-flight drops you as described above. On a server that the multiplayer settings rule out, it only shows that the mod is disabled there.
 - **Open flight Settings** opens the configuration screen. With Mod Menu installed, you can also open it from the mod list.
 
 ### Settings
@@ -61,7 +61,7 @@ All settings are saved to `config/flight.json` as soon as you change them.
 
 | Setting | Default | Meaning |
 | --- | --- | --- |
-| Flight | On | The current state, the same one the toggle key switches. |
+| Flight Ability | On | The current state, the same one the toggle key switches. |
 | Singleplayer Default | On | The state a reset restores in singleplayer worlds, including worlds you open to LAN. |
 | Server Default | On | The state a reset restores on servers that the multiplayer mode allows. |
 | Reset on World Exit | Off | Every world starts from its default state instead of keeping the last state. |

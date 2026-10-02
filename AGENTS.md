@@ -52,7 +52,7 @@ The mod version itself follows [Semantic Versioning](https://semver.org/); the `
 - While the feature is active, game mode changes and ability updates from the server never end the flight; they may still start it, as in vanilla. Only the player ends the flight, by double-tapping jump or by landing.
 - When the feature stops being active (toggled off, or the current server is ruled out), a flight that only the mod allowed (flying without `mayfly`) ends.
 - `FlightController` is the single owner of whether the feature is active, which is the toggle state being on and the current scene (singleplayer or a multiplayer server, determined on join) being allowed, and of the rule that keeps the player flying across ability updates.
-- The toggle state is enabled by default. A configurable key binding toggles it. It is unbound by default. Each toggle shows the new state on the action bar and saves it to the configuration file, so it persists across game restarts.
+- The toggle state is enabled by default. A configurable key binding, "Toggle Flight Ability", toggles it; it switches whether the player can take off, not the flying state itself. It is unbound by default. Each toggle shows the new state on the action bar and saves it to the configuration file, so it persists across game restarts.
 - Defaults depend on the scene: a singleplayer default (worlds hosted by this client, including ones opened to LAN) and a server default (servers the multiplayer mode allows). Both are on by default.
 - Reset rules restore the scene's default when the player joins an allowed scene: "reset on world exit" for every world, and "reset on game exit" for the first allowed world after the game starts. Both are off by default. Resets happen on join so that they use the next scene's default and still work after a crash.
 - The multiplayer mode is a hard limit: `DISABLED` (the default) rules out every server, `WHITELIST` allows only servers in the server list, and `BLACKLIST` allows every server except those in it. On a ruled-out server the feature stays off and the toggle key only reports that it is disabled there. Joining another player's LAN world or a Realm counts as multiplayer.
@@ -74,7 +74,7 @@ The mod version itself follows [Semantic Versioning](https://semver.org/); the `
 ### Implementation
 
 - Language: Java only.
-- Source sets: `src/main` holds only `fabric.mod.json` (and an icon, if one is added). All code and client resources live in `src/client`, and the client game tests live in `src/gametest`.
+- Source sets: `src/main` holds only `fabric.mod.json` and the icon. All code and client resources live in `src/client`, and the client game tests live in `src/gametest`.
 - Mixins: prefer the MixinExtras injectors bundled with Fabric Loader (for example `@ModifyExpressionValue` and `@WrapOperation`) over `@Redirect` and `@Overwrite`, to stay compatible with other mods and keep porting work small.
 
 ### Testing

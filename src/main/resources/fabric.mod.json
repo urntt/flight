@@ -13,6 +13,7 @@
 		"issues": "https://github.com/urntt/flight/issues"
 	},
 	"license": "MIT",
+	"icon": "assets/flight/icon.png",
 	"environment": "client",
 	"entrypoints": {
 		"client": [
