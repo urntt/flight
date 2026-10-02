@@ -1,0 +1,17 @@
+{
+	"schemaVersion": 1,
+	"id": "flight-gametest",
+	"version": "0.0.0",
+	"name": "flight game tests",
+	"environment": "client",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"com.urntt.flight.gametest.FlightLogicGameTest",
+			"com.urntt.flight.gametest.FlightClientGameTest",
+			"com.urntt.flight.gametest.FlightMultiplayerGameTest"
+		]
+	},
+	"depends": {
+		"flight": "*"
+	}
+}

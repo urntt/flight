@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "flight",
+	"version": "${version}",
+	"name": "flight",
+	"description": "Lets the local player fly like in Creative mode in every game mode.",
+	"authors": [
+		"urntt"
+	],
+	"contact": {
+		"homepage": "https://github.com/urntt/flight",
+		"sources": "https://github.com/urntt/flight",
+		"issues": "https://github.com/urntt/flight/issues"
+	},
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"com.urntt.flight.FlightClient"
+		],
+		"modmenu": [
+			"com.urntt.flight.compat.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		{
+			"config": "flight.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "~${minecraft_version}",
+		"java": ">=${java_version}",
+		"fabric-api": ">=${fabric_api_version}"
+	},
+	"suggests": {
+		"modmenu": "*"
+	}
+}

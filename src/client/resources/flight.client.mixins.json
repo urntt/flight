@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "com.urntt.flight.mixin",
+	"compatibilityLevel": "JAVA_${java_version}",
+	"client": [
+		"ClientPacketListenerMixin",
+		"LocalPlayerMixin",
+		"MultiPlayerGameModeMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
